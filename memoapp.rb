@@ -12,7 +12,11 @@ if memo_type == "1"
 end
 
 elsif memo_type == "2"
+  File.open('test.csv','a+') do |f|
   puts "編集内容を入力してください。"
+  memo_input = gets.chomp.to_s
+  f.puts "#{memo_input}"
+end
 
 else
   puts "1または2を入力してください。"
